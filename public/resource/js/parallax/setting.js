@@ -1,0 +1,1 @@
+!function(a){"use strict";a(".parallax").parallax("50%",0,.1,!0),a("#counter-wrapper").parallax("50%",1170,.1,!0),a("#download").parallax("50%",0,.1,!0),a("#contact").parallax("50%",0,.1,!0)}(jQuery);

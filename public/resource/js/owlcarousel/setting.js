@@ -1,0 +1,1 @@
+!function(e){"use strict";e("#client-wrapper, #owl-testimoni").owlCarousel({autoPlay:!1,stopOnHover:!0,pagination:!1,navigation:!0,paginationSpeed:1e3,goToFirstSpeed:2e3,singleItem:!0,autoHeight:!0})}(jQuery);

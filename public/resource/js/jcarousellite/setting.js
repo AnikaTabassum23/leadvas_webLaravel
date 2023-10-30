@@ -1,0 +1,1 @@
+$(window).load(function(){"use strict";$(".scrolltop").jCarouselLite({vertical:!0,hoverPause:!0,visible:1,auto:6500,speed:1e3})});

@@ -1,0 +1,1 @@
+!function(t){"use strict";jQuery(".appear").appear();var u=!0;jQuery(".stats").on("appear",function(e){var n={},r=0;u&&(jQuery(".counter-number").each(function(){n[this.id]=t(this).html(),r++}),jQuery.each(n,function(t,u){jQuery({countNum:0}).animate({countNum:u},{duration:3e3,easing:"linear",step:function(){jQuery("#"+t).text(Math.floor(this.countNum))}})}),u=!1)})}(jQuery);

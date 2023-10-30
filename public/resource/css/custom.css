@@ -1,0 +1,226 @@
+.login-container {
+	margin-top: 80px;
+}
+.demo-container {
+	margin-top: 25px;
+}
+.trial-demo {
+	width: 100%; 
+	margin-bottom: 15px;
+}
+
+.trial-demo h2{
+	font-size: 36px; font-weight: normal;color: #666;margin-bottom: 0px;
+}
+.leadvas-contact {
+	font-size: 16px;font-weight: 100;
+}
+.leadvas-dialogue {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.leadvas-dialogue  .dialogue {
+	font-size: 24px;
+	margin-bottom: 30px;
+}
+.leadvas-dialogue  .device_img {
+	width:100%; margin-bottom: 15px;
+}
+
+.leadvas-form .title {
+	font-size:20px; font-weight:normal; color:#666;
+}
+.leadvas-form .note {
+	font-size: 14px;font-weight: 100;
+}
+
+.btn-orange,
+.slider .slider-selection,
+.slider-track {
+    box-shadow: 0 2px 2px #efefef
+}
+.has-error .select2-selection {
+    border: 1px solid #a94442;
+    border-radius: 4px
+}
+.summary {
+    margin: 20px 0 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px
+}
+.slider {
+    width: 100%!important
+}
+.slider-track {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #e8e8e8
+}
+.slider .slider-selection {
+    background: #F55E25;
+    border: 1px solid #f55e25
+}
+.slider .slider-handle {
+    background: #F55E25;
+    opacity: 1
+}
+.user_amount {
+    font-size: 16px;
+    font-weight: 400
+}
+.btn-circle {
+    border-radius: 15px;
+    height: 30px;
+    line-height: 1.42857;
+    padding: 6px 0;
+    text-align: center;
+    width: 30px
+}
+.btn-success {
+    background-color: #4DB04D;
+    color: #fff
+}
+.btn-default.active,
+.btn-default.active[disabled],
+.btn-default.disabled,
+.btn-default.disabled.active,
+.btn-default.disabled:active,
+.btn-default.disabled:focus,
+.btn-default.disabled:hover,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover,
+.btn-default[disabled],
+.btn-default[disabled]:active,
+.btn-default[disabled]:focus,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-default.active,
+fieldset[disabled] .btn-default:active,
+fieldset[disabled] .btn-default:focus,
+fieldset[disabled] .btn-default:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff
+}
+.btn-orange {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #e8e8e8;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    height: 75px;
+    width: 75px;
+    line-height: 1.33;
+    margin-right: 40px
+}
+.btn-orange.active,
+.btn-orange:active,
+.btn-orange:focus,
+.btn-orange:hover {
+    background-color: #f55e25!important;
+    color: #fff!important
+}
+.btn-gray {
+    background-color: #D7D7D7!important;
+    color: #333
+}
+.btn-gray.active,
+.btn-gray:active,
+.btn-gray:focus,
+.btn-gray:hover {
+    background-color: #BFBFBF!important;
+    color: #333!important
+}
+.select2-container .select2-selection--single {
+    height: 32px
+}
+
+@media screen and (max-width: 1920px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 193px!important
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 100px!important
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 0!important
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 0!important
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 0!important
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 0!important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 0!important
+    }
+	.login-container {
+		margin-top: 30px;
+	}
+}
+
+@media screen and (max-width: 479px) {
+    .fiture-top {
+        visibility: visible;
+        animation-delay: .4s;
+        animation-name: fadeInDown;
+        margin-bottom: 0!important
+    }
+	.leadvas-form {
+		margin-top: 20px;	
+	}
+	.login-container {
+		margin-top: 20px;
+	}
+	.trial-demo h2{
+		font-size: 30px;
+	}
+	.leadvas-dialogue .dialogue {
+		font-size: 18px;
+	}
+}

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html xmlns="//www.w3.org/1999/xhtml">
+   
+<!-- Mirrored from www.fedena.com/demo by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2016 09:04:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <script src="../www.google.com/recaptcha/api.js" async defer></script>
+  <title>School ERP Software and Solutions | 30 Days Free Demo - Fedena Pro</title>
+  <meta name="Description" content="Fedena School ERP - 30 days free trial before buying. Signup for a free demo today and see how Fedena can help you automate your school." />
+
+      <!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+      <!--link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/-->
+      <link href="stylesheets/bootstrap.css?1449035040" media="screen" rel="stylesheet" type="text/css" />
+      <link href="stylesheets/stylesheet.min.css?1469784160" media="screen" rel="stylesheet" type="text/css" />
+      <link href="stylesheets/modernmak.css?1469784160" media="screen" rel="stylesheet" type="text/css" />
+      <link href="stylesheets/facebox.css?1383892217" media="screen" rel="stylesheet" type="text/css" />
+      <link href="stylesheets/horinaja.css?1383892217" media="screen" rel="stylesheet" type="text/css" />
+      <!--<link href="/stylesheets/nicetitle.css?1383892217" media="screen" rel="stylesheet" type="text/css" />-->
+      <link href="stylesheets/colorbox.min.css?1399804367" media="screen" rel="stylesheet" type="text/css" />
+      <link href="stylesheets/jquery-ui.css?1418881571" media="screen" rel="stylesheet" type="text/css" />
+
+      <link rel="shortcut icon" href="favicon.ico" />
+      <script src="javascripts/prototype.js?1399804365" type="text/javascript"></script>
+	  <script src="javascripts/effects.js?1399804365" type="text/javascript"></script>
+	  <script src="javascripts/dragdrop.js?1399804365" type="text/javascript"></script>
+	  <script src="javascripts/controls.js?1399804365" type="text/javascript"></script>
+	  <script src="javascripts/application.js?1383892153" type="text/javascript"></script>
+      <script src="javascripts/slider.min.js?1399804365" type="text/javascript"></script>
+      <script src="javascripts/class.horinaja.scriptaculous.min.js?1399804365" type="text/javascript"></script>
+      <!--<script src="/javascripts/nicetitle.min.js?1399804365" type="text/javascript"></script>-->
+      <script src="javascripts/jquery-1.11.2.min.js?1424435403" type="text/javascript"></script>
+      <link href="stylesheets/droidsans.css?1467714355" media="screen" rel="stylesheet" type="text/css" />
+      
+      <script src="javascripts/bootstrap.min.js?1399804365" type="text/javascript"></script>
+
+
+      <script type="text/javascript">
+         function fireEvent(element,event) {
+            if (document.createEvent) {
+               // dispatch for firefox + others
+               var evt = document.createEvent("HTMLEvents");
+               evt.initEvent(event, true, true ); // event type,bubbling,cancelable
+               return !element.dispatchEvent(evt);
+            } else {
+               // dispatch for IE
+               var evt = document.createEventObject();
+               return element.fireEvent('on'+event,evt)
+            }
+         }
+
+      </script>
+      
+
+      <script src="javascripts/jquery-ui5f3c.js?1418881571" type="text/javascript"></script>
+
+
+      
+      <script src="javascripts/jquery.dropdownPlain86a6.js?1383892153" type="text/javascript"></script>
+      <script src="javascripts/jquery.colorbox.min038f.js?1399804365" type="text/javascript"></script>
+      <script src="javascripts/jquery.cookie91e4.js?1415095778" type="text/javascript"></script>
+
+      <script>
+         $(document).ready(function () {
+
+            $(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+            $(".youtube1").colorbox({iframe:true, innerWidth:500, innerHeight:330});
+            $('.demo1').colorbox({iframe:true, innerWidth:500, innerHeight:390});
+            $(".group1").colorbox({rel:'group1'});
+            //Example of preserving a JavaScript event for inline calls.
+            $("#click").click(function(){
+               $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+               return false;
+            });
+
+            $("#content2_2").hover(function () {
+               $(this).addClass("content2_2","slow");
+            }, function() {
+               $(this).removeClass("content2_2","slow");
+            });
+
+            $(".ar_icons").hover(function () {
+               $(this).addClass("ar_icons_hover","slow");
+            }, function() {
+               $(this).removeClass("ar_icons_hover","slow");
+            });
+
+
+
+            var height = $('.history_content').height() + 150;
+            $('.history_content_divider').height(5690);
+
+            $( ".modules ul li a" ).tooltip({
+               position: { my: "left+32 top+5", at: "left bottom", collision: "flipfit" }
+            });
+
+
+            $('.contact_phone_icon').click(function () {
+               if(!$(this).hasClass("active")){
+                  $('.b-modal').remove();
+                  $( "<div class='b-modal'></div>" ).appendTo( "body" );
+                  $('.contact_phone_icon').addClass("active")
+                  $("#contact_popup").fadeIn("slow");
+               }
+               else{
+                  $('.contact_phone_icon').removeClass("active")
+               }
+            });
+
+            $(".b-close").click(function(){
+               $(".b-modal").remove();
+               $('.contact_phone_icon').removeClass("active")
+               $("#contact_popup").fadeOut("slow");
+
+            });
+
+            $(".b-modal").click(function(){
+               $("this").remove();
+               $("#contact_popup").fadeOut("slow");
+
+            });
+
+
+
+            $(document).mouseup(function (e)
+            {
+               var container = $("#contact_popup,.contact_phone_icon");
+               if (!container.is(e.target) // if the target of the click isn't the container...
+                  && container.has(e.target).length === 0) // ... nor a descendant of the container
+               {
+                  //container.hide();
+                  $(".b-modal").remove();
+                  $('.contact_phone_icon').removeClass("active")
+                  $("#contact_popup").fadeOut("slow");
+               }
+            });
+
+            jQuery(document).delegate(".parent","hover",function(){
+               jQuery(".parent").css({"z-index":"0"});
+               jQuery(this).css({"z-index":"2"});
+            })
+
+            $(".sub_menu").each(function(){
+               $(this).prev("a").addClass("parent");
+
+               $(this).hover(function(){
+                  $(this).prev("a").css({"border":"1px solid #c0c0c0",
+                     "border-bottom":"1px solid transparent",
+                     "padding-bottom":"2px",
+                     "z-index":"2" });
+
+               },function(){
+                  $(this).prev("a").css("border","1px solid transparent");
+                  $(this).prev("a").css("padding-bottom","0");
+                  //$(this).prev("a").css("color","#555");
+               });
+            });
+            // lead track
+            lead_track();
+         });
+
+         function lead_track(){
+            if (false ){
+               value=''
+               if (!value){value="nil";}
+               $.cookie("utm_campaign",value)
+            }
+            if (false ){
+               value=''
+               if (!value){value="nil";}
+               $.cookie("utm_medium",value)
+            }
+            if (false ){
+               value=''
+               if (!value){value="nil";}
+               $.cookie("utm_source",value)
+            }
+            if (false ){
+               value=''
+               if (!value){value="nil";}
+               $.cookie("utm_content",value)
+            }
+            if (true ){
+               var refer_url=encodeURIComponent(document.referrer);
+               url=decodeURIComponent(refer_url)
+               if (!url){url="direct";}
+               $.cookie("source",url)
+
+            }
+         }
+
+         $(function() {
+            var bar = $('#headerSlideContainer');
+            var top = bar.css('top');
+            $(window).scroll(function() {
+               if($(this).scrollTop() > 100) {
+                  bar.stop().animate({'top' : '0px'}, 500);
+               } else {
+                  bar.stop().animate({'top' : top}, 500);
+               }
+            });
+         });
+
+
+
+         $(window).scroll(function() {
+            if ($(this).scrollTop() > 50){
+
+               //$('header').addClass("small");
+               $("header").removeClass("large").addClass("small");
+            }
+            else{
+               $("header").removeClass("small").addClass("large");
+               //$('header').removeClass("small");
+            }
+         });
+
+
+
+
+
+      </script>
+
+      <!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="stylesheets/ie.css" media="screen" />
+      <![endif]-->
+
+
+   </head>
+
+   <body>
+      <div id="fb-root"></div>
+      <div id="wrapper">
+
+         <header class="large">
+            <div id="header">
+               <div class="wrapper">
+
+                  <div id="nav-holder">
+                     <span id="logo"><a href="index.html"><img src="images/fedena_logo.png" alt="Fedena ­ School Management Software"></a></span>
+                     <a  class="contact_phone_icon"></a>
+                     <div id="contact_popup">
+                        <span class="button b-close"></span>
+                        <h5>Call us now</h5>
+                        <h6>+91 - 8030 7528 12</h6>
+                        <span class="divider_section">OR</span>
+                        <a href="contact.html"> Let us call you !</a>
+                     </div>
+                     
+                     <button type="button" class="btn btn-med btn-green" id="top-nav-btn" data-toggle="modal" data-target="#demoModal">
+                       Try Free Demo
+                     </button>
+                     <ul id="primary-nav" class="list-nav-hor dropdown">
+						<li class="primary-nav-item">
+						  <a href="index.html" class="primary-nav-header">Home</a>
+						</li>
+						<li class="primary-nav-item">
+						  <a href="pricing.html" class="primary-nav-header">Pricing</a>
+						</li>
+						<li class="primary-nav-item">
+						  <a href="contact.html" class="primary-nav-header">Contact Us</a>
+						</li>
+				     </ul>
+                  </div>
+               </div>
+            </div>
+         </header>
+
+         <div class="inner-pages">
+            
+
+
+
+<div class="page-header">
+
+    
+
+
+    
+      <h1>Try Fedena School ERP Software free for 30 days</h1>
+      <p>No Credit card details required</p>
+      <!-- <p>See how Fedena will help you manage your institute’s processes and resources better</p> -->
+    
+</div>
+<div id="page_content" class="home">
+    <div class="container">
+
+        <div class="c-m-12">
+
+
+            <div class="demo-sidebar">
+
+
+    <img alt="Fedena School ERP" class="demo-img" src="images/fedena_school_management_demo7482.png?1409831117" />
+
+
+
+
+
+
+    <h2>Get started with Fedena School ERP</h2>
+    <ul>
+        <li>Watch a <a href="https://youtu.be/N03A5z7i8sI" target="_blank">recorded demo</a>.</li>
+        <li>Read articles on our <a href="http://support.fedena.com/support/home" target="_blank">Support portal</a>.</li>
+        <li>Need more information? Write to us at <a href="mailto:info@fedena.com" target="_blank">info@fedena.com</a>. </li>
+    </ul>
+
+
+
+    <span class="side-hr"> </span>
+    <p>We respect your   <a href="privacy_policy.html">Privacy</a></p>
+</div>
+
+
+            
+<script src="javascripts/jquery.elastic.source0f7f.js?1436355985" type="text/javascript"></script>
+
+
+
+
+<form action="http://www.fedena.com/demo" class="mak-form form-horizontal" id="contact_demo_form" method="post" name="fedenacontact"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="7n2Uevnr3Aa3sO5J//B27eEsjRfWwzOv7er/w7/6ITI=" /></div>
+  
+  
+  <input id="contact_info_plan" name="contact_info[plan]" type="hidden" />
+  
+
+  <input id="contact_info_media" name="contact_info[media]" type="hidden" value="Desktop" />
+  <input id="contact_info_form_key" name="contact_info[form_key]" type="hidden" />
+
+  <div class="demo-form contact-form">
+      <div class="f-g">
+          <div class="c-m-6">
+              <label for="" class="lab">Name</label>
+              <input autofocus="true" class="f-c" id="contact_info_client_name" name="contact_info[client_name]" placeholder="First Name" size="30" type="text" />
+              
+          </div>
+          <div class="c-m-6">
+              <label for="" class="lab transparant">Your name</label>
+              <input class="f-c" id="contact_info_last_name" name="contact_info[last_name]" placeholder="Last Name" size="30" type="text" /></div>
+          
+      </div>
+
+      <div class="f-g">
+          <label for="" class="lab">Email</label>
+          <div class="c-m-12"><input class="f-c" id="contact_info_client_email" name="contact_info[client_email]" placeholder="yourname@company.com" size="30" type="text" />
+              
+          </div>
+      </div>
+
+      <div class="f-g">
+          <label for="" class="lab">Mobile Phone</label>
+          <div class="c-m-12">
+              <input class="f-c" id="contact_info_client_phone" name="contact_info[client_phone]" placeholder="Mobile number with country code" size="30" type="text" />
+              
+          </div>
+      </div>
+
+      <span class="form-hr"></span>
+      <div class="f-g c-m-12">
+          <label for="" class="lab">Select an interest</label>
+          <div class="c-m-12">
+              <div class="row">
+                  <div class="mak-check " data-interest='use'>
+                      <span class="head">
+                          <i class="cb"></i>I want to use Fedena</span>
+                      <p>Manage my institution</p>
+                  </div>
+                  <div class="mak-check " data-interest='sell'>
+                      <span class="head">
+                          <i class="cb"></i>I want to resell Fedena</span>
+                      <p>Become a partner</p>
+                  </div>
+              </div>
+
+              <input class="interest" id="contact_info_client_type" name="contact_info[client_type]" type="hidden" value="use" />
+              
+          </div>
+      </div>
+      <div class="f-g">
+          <label for="" class="lab">Location</label>
+          <div class="c-m-12">
+              <input class="f-c" id="contact_info_client_location" name="contact_info[client_location]" placeholder="City name" size="30" type="text" />
+              
+          </div>
+      </div>
+      <!-- Institute options ===================== -->
+      <div class="use ">
+          <!-- <div class="f-g">
+            <label for="" class="lab">How you heard about Fedena?</label>
+            <div class="c-m-6">
+
+          <select class="f-c heard_about" id="heard_about" name="heard_about_dropdown" prompt="Select one"><option value="Online ad">Online ad</option>
+<option value="Facebook">Facebook</option>
+<option value="Online search">Online search</option>
+<option value="Friend">Friend</option>
+<option value="Other">Other</option></select>
+
+          
+            </div>
+  
+            <div class="c-m-6 heard_about_other">
+          <input class="f-c heard_about" id="heard_about_tag" name="heard_about" placeholder="Other" type="text" />
+          
+            
+          
+            </div>
+          </div> -->
+          <div class="f-g">
+              <label for="" class="lab">Name of institution
+              </label>
+              
+              
+              
+              
+                  <div class="c-m-12"><input class="f-c" id="client_organization" name="client_organization" placeholder="Institution Name" type="text" />
+                  </div>
+                  
+          </div>
+          <div class="f-g">
+              <label for="" class="lab">Institution type</label>
+              <div class="c-m-12">
+                  <select class="f-c" id="contact_info_institution_type" name="contact_info[institution_type]"><option value="">Select one</option>
+<option value="K-12 School">K-12 School</option>
+<option value="Higher Education (Colleges)">Higher Education (Colleges)</option>
+<option value="University">University</option>
+<option value="Group of Institutions">Group of Institutions</option>
+<option value="Other">Other</option></select>
+                  
+              </div>
+          </div>
+
+          <div class="f-g">
+              <label for="" class="lab">
+                  Your role in the Institution</label>
+              
+              
+              
+              
+                  <div class="c-m-12"><input class="f-c" id="client_profile" name="client_profile" placeholder=" e.g.: IT Director, HoD, Principal" type="text" />
+                  </div>
+                  
+          </div>
+      </div>
+
+      <!-- Reseller options ===================== -->
+      <div class="sell">
+          <!-- <div class="f-g">
+            <label for="" class="lab">How you heard about Fedena?</label>
+            <div class="c-m-6">
+
+          <select class="f-c heard_about" id="heard_about" name="contact_info[heard_about_dropdown]"><option value="">Select one</option>
+<option value="Online ad">Online ad</option>
+<option value="Facebook">Facebook</option>
+<option value="Online search">Online search</option>
+<option value="Friend">Friend</option>
+<option value="Other">Other</option></select>
+
+          
+            </div>
+  
+            <div class="c-m-6 heard_about_other">
+
+          <input class="f-c" id="contact_info_heard_about" name="contact_info[heard_about]" placeholder="Other" size="30" type="text" />
+          
+            
+          
+            </div>
+          </div> -->
+          <div class="f-g">
+              <label for="" class="lab">
+                  Company name</label>
+              <div class="c-m-12"><input class="f-c" id="contact_info_client_organization" name="contact_info[client_organization]" placeholder="Company name " size="30" type="text" />
+                  
+              </div>
+          </div>
+          <div class="f-g">
+              <label for="" class="lab">No. of employees</label>
+              <div class="c-m-12">
+                  <select class="f-c" id="contact_info_no_employees" name="contact_info[no_employees]"><option value="">Select one</option>
+<option value="1 to 2">1 to 2</option>
+<option value="3 to 10">3 to 10</option>
+<option value="11 to 100">11 to 100</option>
+<option value="101 to 300">101 to 300</option>
+<option value="300 and more">300 and more</option></select>
+                  
+              </div>
+          </div>
+
+          <div class="f-g">
+              <label for="" class="lab">Your role
+              </label>
+              <div class="c-m-12"><input class="f-c" id="contact_info_client_profile" name="contact_info[client_profile]" placeholder="e.g.: CEO, Business Analyst" size="30" type="text" />
+                  
+              </div>
+          </div>
+      </div>
+      <div class="f-g">
+          <label for="" class="lab">
+              Website
+          </label>
+          <div class="c-m-12"><input class="f-c" id="contact_info_website" name="contact_info[website]" placeholder="Website link" size="30" type="text" />
+          </div>
+      </div>
+      <div class="f-g">
+          <label for="" class="lab">Message
+          </label>
+          <div class="c-m-12">
+              <textarea class="f-c ta" cols="40" id="contact_info_client_message" name="contact_info[client_message]" placeholder="If you have any specific queries about Fedena" rows="20"></textarea>
+              
+          </div>
+      </div>
+      
+        <div class="f-g">
+            <div class="c-m-12">
+                
+                <label for="contact_info_demo_data" class="lab">
+                    <input name="contact_info[demo_data]" type="hidden" value="0" /><input checked="checked" id="contact_info_demo_data" name="contact_info[demo_data]" type="checkbox" value="1" />
+                    Load sample data
+                </label>
+
+            </div>
+        </div>
+      
+      <div class="f-g">
+          <div class="c-m-12">
+              
+          </div>
+          <input id="bot_control" name="bot_control" type="hidden" />
+          <div class="c-m-5 ">
+              <input class="btn btn-large btn-green mt20" id="contact_info_submit" name="commit" onclick="if (window.hiddenCommit) { window.hiddenCommit.setAttribute('value', this.value); }else { hiddenCommit = document.createElement('input');hiddenCommit.type = 'hidden';hiddenCommit.value = this.value;hiddenCommit.name = this.name;this.form.appendChild(hiddenCommit); }this.setAttribute('originalValue', this.value);this.disabled = true;this.value='Please wait...';result = (this.form.onsubmit ? (this.form.onsubmit() ? this.form.submit() : false) : this.form.submit());if (result == false) { this.value = this.getAttribute('originalValue');this.disabled = false; }return result;" type="submit" value="Submit" />
+          </div>
+      </div>
+  </div>
+</form>
+
+<script>
+
+  function show_other() {
+      $('#contact_info_heard_about').show();
+      $('#heard_about_tag').show();
+  }
+  function hide_other() {
+      $('#contact_info_heard_about').hide();
+      $('#heard_about_tag').hide();
+  }
+  hide_other();
+  $('.heard_about').change(function () {
+      $("input[name='heard_about']").val($(this).val());
+      $('#contact_info_heard_about').val($(this).val());
+      var heard_about = $(this).val();
+      if (heard_about == 'Other') {
+          $('#contact_info_heard_about').val('');
+          $('#heard_about_tag').val('');
+          show_other();
+      } else {
+          hide_other();
+      }
+
+  });
+</script>
+
+
+
+
+<script>
+  function make_active(interest) {
+      switch (interest) {
+          case 'use': //interest
+              me = $("div[data-interest='use']");
+              me.addClass('selected');
+              $('.use').show(1);
+              $('.sell').hide(50);
+              $('#contact_info_client_organization').val("");
+              $('#contact_info_client_profile').val("");
+              break;
+          case 'sell': //sell
+              me = $("div[data-interest='sell']");
+              me.addClass('selected');
+              $('.sell').show(1);
+              $('.use').hide(50);
+              $('#client_organization').val("");
+              $('#client_profile').val("");
+              break;
+          default:
+              me = $("div[data-interest='use']");
+              // me.addClass('selected');
+              // $('.use').show(1);
+              $('.use').hide(1);
+              $('.sell').hide(50);
+              break;
+      }
+  }
+  function form_back_ground_submit() {
+      url = "/contact?halfway=true"
+      $.ajax({
+          type: "POST",
+          url: url,
+          data: $("#contact_demo_form").serialize(), // serializes the form's elements.
+          success: function (data)
+          {
+              console.log(data);
+          }
+      });
+  }
+  $(document).ready(function () {
+      $('.ta').elastic();
+      $('.mak-check').click(function () {
+          $('.mak-check').removeClass('selected');
+          $(this).addClass('selected');
+          var interest = $(this).attr('data-interest');
+          // console.log(interest) $("#interest option[value='"+interest+"']").attr("selected","selected");
+
+          $("#interest option").each(function () {
+              if ($(this).text() === interest)
+                  $(this).attr("selected", "selected");
+          }
+          );
+          $('.interest').val(interest);
+          make_active(interest);
+          form_back_ground_submit();
+      });
+
+  });
+
+
+   make_active('') 
+
+
+
+    $(document).ready(function () {
+        $('.mak-check').removeClass('selected');
+        make_active('use');
+    }) 
+</script>
+
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="javascripts/jquery.geocomplete.min70e3.js?1438240059" type="text/javascript"></script>
+
+<script>
+  $("#contact_info_client_location").geocomplete();
+  $("#client_location").geocomplete();
+</script>
+<script>
+  $(".fieldWithErrors").change(function () {
+      //$( this ).parent().switchClass('fieldWithErrors','f-c');
+      $(this).next().hide();
+      console.log($(this).next());
+      $(this).removeClass('fieldWithErrors');
+  });
+</script>
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+         </div>
+
+
+      </div>
+      <div style="clear:both"></div>
+      <div id="footer">
+         <div class="footer">
+            <div class="section group">
+               <div class="col span_1_of_6">
+                  <h6>Why Fedena?</h6>
+                  <a href="fedena_difference.html">The Fedena Difference</a>
+                  <a href="101_reasons.html">101 Reasons</a>
+                  <a href="awards_and_recognition.html">Awards & Recognition</a>
+                  <a href="customers.html">Customer Testimonials</a>
+               </div>
+               <div class="col span_1_of_8">
+                  <h6>Product</h6>
+                  <a href="feature_tour.html">Feature Tour</a>
+                  <a href="demo.html">Free Demo</a>
+                  <a href="pricing_and_plans.html">Pricing & Plans</a>
+                  <a href="http://marketplace.fedena.com/" target="_blank">Marketplace</a>
+                  <a href="http://enterprise.fedena.com/" target="_blank">Custom ERP</a>
+                  <a href="mobile">Mobile</a>
+               </div>
+               <div class="col span_1_of_8">
+                  <h6>Help</h6>
+                  <a href="contact.html">Contact Us</a>
+                  <a href="http://support.fedena.com/" target="_blank">Support Forums</a>
+                  <a href="services.html">Services</a>
+                  <a href="http://apis.fedena.com/" target="_blank">API Playground</a>
+               </div>
+               <div class="col span_1_of_8">
+                  <h6>Partner</h6>
+                  <a href="partner.html">Partner Programs</a>
+                  <a href="channel_partner.html">Channel Partner</a>
+                  <a href="oem_partner.html">OEM Partner</a>
+               </div>
+               <div class="col span_1_of_8">
+                  <h6>Company</h6>
+                  <a href="history.html">History</a>
+                  <a href="core_team.html">Core Team</a>
+                  <a href="blog/index.html" target="_blank">Blog</a>
+                  <a href="media_and_press.html">Media & Press</a>
+                  <a href="careers.html">Careers</a>
+               </div>
+               <div class="col span_2_of_6">
+                  <div class="contact-info">
+                     <h6>Call us now</h6>
+                     <span>+91- 8030 7528 12</span>
+                     <a href="contact.html">Contact Us</a>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div id="social_icons">
+            <p>&copy;2016 <a href="http://foradian.com/">Foradian Technologies</a>. All Rights Reserved. <a href="terms_of_service.html">Terms</a> & <a href="privacy_policy.html">Privacy</a></p>
+            <ul class="social_icons">
+               <li class="fb"><a href="http://facebook.com/fedenapro" target="_blank"></a></li>
+               <li class="tw"><a href="http://twitter.com/fedenapro" target="_blank"></a></li>
+               <li class="gp"><a href="https://plus.google.com/109634566879572883664/" target="_blank"></a></li>
+               <li class="in"><a href="http://www.linkedin.com/company/foradian-technologies-pvt-ltd" target="_blank"></a></li>
+               <li class="yt"><a href="http://www.youtube.com/user/foradian" target="_blank"></a></li>
+            </ul>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="demoModalLabel">Start your 30-day free trial</h4>
+            </div>
+            <div class="modal-body">
+              <form action="http://www.fedena.com/demo" class="home_form" id="home_form_modal" method="get">
+                <input type="email" name="email" class="home_form_input" value="" required="" placeholder="Your Email Address" id="email_field_modal">
+                <label id="demo_submit-error" class="error" for="email_field" style="display:none;"></label>
+                <input id="origin" name="origin" type="hidden" value="modal" />
+                <input type="submit" class="btn btn-med btn-red"  value="Get your free demo" id="demo_submit_modal">
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('#demoModal').on('shown.bs.modal', function () {
+          $('.home_form_input').focus()
+          })
+        });
+      </script>
+      <!-- preload the images -->
+      <div style='display:none'>
+      </div>
+      <div id='youtube' style="display:none">
+         <iframe width="560" height="349" src="#" frameborder="0" >
+         </iframe>
+      </div>
+
+      <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "//www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      try {
+         var pageTracker = _gat._getTracker("UA-10095325-2");
+         pageTracker._trackPageview();
+      } catch(err) {}
+      </script>
+      
+   </body>
+
+<!-- Mirrored from www.fedena.com/demo by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Jul 2016 09:04:22 GMT -->
+</html>
+<script>
+  $('#demo_submit_modal').click(function(e) {
+    var sEmail = $('#email_field_modal').val();
+    if ($.trim(sEmail).length == 0) {
+        $('#demo_submit-error').show();
+        $('#demo_submit-error').html('Please enter an email address');
+        e.preventDefault();
+        return false;
+    }
+    if (validateEmail(sEmail)) {
+    }
+    else {
+        $('#demo_submit-error').show();
+        $('#demo_submit-error').html('Invalid email address');
+        e.preventDefault();
+        return false;
+    }
+  });
+  $('#email_field_modal').focus(function(e){
+    console.log("hi");
+    $('#demo_submit-error').hide();
+  });
+  $('.modal-content').click(function(e){
+    $('#demo_submit-error').hide();
+  });
+  $('.close').click(function(e){
+    $('#demo_submit-error').hide();
+  });
+
+function validateEmail(sEmail) {
+  var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  if (filter.test(sEmail)) {
+    return true;
+  }else {
+    return false;
+  }
+}
+
+
+</script>
