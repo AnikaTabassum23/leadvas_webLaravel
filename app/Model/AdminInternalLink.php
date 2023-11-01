@@ -16,6 +16,7 @@ class AdminInternalLink extends BaseModel
     public function scopeActive($query)
     {
         return $query->where('status', 1);
+        
     }
 
     public function scopeValid($query)

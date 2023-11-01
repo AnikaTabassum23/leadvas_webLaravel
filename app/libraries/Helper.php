@@ -135,21 +135,20 @@ class Helper {
 
         $config = [
             'driver'        => 'smtp',
-            'host'          => 'smtp.gmail.com',
+            'host'          => 'sandbox.smtp.mailtrap.io',
             'SMTPAuth'      => true,
             'SMTPDebug'     => 2,
-            'port'          => 587,
+            'port'          => 2525,
             'from'          => [
-            'address'       => 'tanvirahmed219921@gmail.com',
-            'name'          => 'DeMeraki'
+            'address'       => 'tabassumakhianika123@gmail.com',
+            'name'          => 'Leadevas'
             ],
             'encryption'    => 'tls',
-            'username'      => 'tanvirahmed219921@gmail.com',
-            'password'      => 'ntatvoolzicvnvhy',
+            'username'      => '0c9bc5403d89b7',
+            'password'      => 'f8015bdb14edaa',
             'sendmail'      => '/usr/sbin/sendmail -bs',
             'pretend'       => false
-       ];
-
+        ];
         Config::set('mail', $config);
         return $config;
     }

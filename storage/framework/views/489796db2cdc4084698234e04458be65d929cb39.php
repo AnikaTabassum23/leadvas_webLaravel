@@ -96,4 +96,4 @@
 		</tr>
 	</tbody>
 </table>
-<?php /**PATH D:\xampp\htdocs\DeMeraki\resources\views/web/userAccount/userVerifyMail.blade.php ENDPATH**/ ?>
+<?php /**PATH E:\laragon\www\LeadVasWeb\resources\views/web/userAccount/userVerifyMail.blade.php ENDPATH**/ ?>

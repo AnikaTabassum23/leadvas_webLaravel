@@ -8,7 +8,7 @@
     <meta name="author" content="leadvas">
     <link rel="shortcut icon" href="<?php echo asset('resource/ico/favicon.png'); ?>">
     <meta name="google-site-verification" content="Xu2B86JsxD6JHRl5CzQB_LzSdgi77AnntKxQ4_ghCAc" />
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--Facebook-->
 	<meta property="og:title" content="<?php $title; ?>"/>
 	<meta property="og:type" content="website"/>
@@ -89,8 +89,8 @@
 						<li><a id="GoToContact" href="#contact">Contact</a></li>
 					</ul>
 					<div class="navbar-right">
-						<a href="" class="btn btn-gray">Login</a>
-						<a href="<?php echo asset('resources/views/web/documents/demo.html'); ?>" class="btn btn-primary">Try Demo</a>
+						<a href="login" class="btn btn-gray">Login</a>
+						<a href="demo" class="btn btn-primary">Try Demo</a>
 
 					</div>	
 				</div><!--/.nav-collapse -->
@@ -139,9 +139,6 @@
 	</section>
 	<!-- End home -->
 	<div class="clearfix"></div>
-	<?php
-	//  $this->load->view('include/features');
-	  ?>
 	<?php echo $__env->make('include.features', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 	<div class="clearfix"></div>
 	<!-- Start description -->

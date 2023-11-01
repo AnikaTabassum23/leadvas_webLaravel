@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,13 @@ Route::post('customFileUnlink', array('as' => 'custom.fileUnlink', 'uses' => 'Fi
 Route::get('multipleFileUnlink', array('as' => 'custom.multipleFileUnlink', 'uses' => 'FileUploadController@multipleFileUnlink'));
 // Front end //
 Route::group(['namespace' => 'web'], function (){
-    // Route::get('/', array('as'=>'intro', 'uses'=>'FrontEndController@demo'));
+    Route::get('demo', array('as' => 'demo', 'uses' => 'HomeController@demo'));
+    Route::get('login', array('as' => 'login', 'uses' => 'HomeController@login'));
+    
+
+    Route::get('memberAdd', array('access' => ['resource|leads.create'], 'uses' => 'LeadController@add'));
+    Route::post('memberAdd', array('access' => ['resource|leads.create'], 'uses' => 'LeadController@storeAdd'));
+
     Route::get('/', array('as'=>'home', 'uses'=>'HomeController@index'));
     // how it works
     Route::get('/how-work', array('as'=>'how_work', 'uses'=>'WorkController@index'));
@@ -41,29 +48,16 @@ Route::group(['namespace' => 'web'], function (){
     // user account
     Route::get('user_account', array('as'=>'user_account', 'uses'=>'UserAccountController@index'));
     Route::post('user_accountAction', array('as'=>'user_accountAction', 'uses'=>'UserAccountController@user_accountAction'));
-
     //email verify
     Route::get('/email-message', array('as'=>'emailMessage', 'uses'=>'UserAccountController@emailMessage'));
     Route::get('/set-password/{token}', array('as'=>'setPassword', 'uses'=>'UserAccountController@setPassword'));
     Route::post('/save-password', array('as'=>'savePassword', 'uses'=>'UserAccountController@savePassword'));
-
     //user log in
     Route::post('/save-password', array('as'=>'savePassword', 'uses'=>'UserAccountController@savePassword'));
-
      // Place Order
      Route::get('placeorder', array('as'=>'placeorder', 'uses'=>'PlaceOrderController@index'));
 });
-Route::get('demo', array('as'=>'demo', 'uses'=>'AdapterController@javascript'));
+    ## Create registration
+    Route::get('/registration/create', 'RegistrationController@create')->name('registration.create');
+    Route::post('/registration/store', 'RegistrationController@store')->name('registration.store');
 
-$route['login'] = 'user/login';
-$route['forgot-pass'] = 'user/forgot_pass';
-$route['reset-pass'] = 'user/reset_pass';
-$route['set-pass'] = 'user/set_pass';
-$route['demo'] = 'package/demo';
-$route['privacy-policy'] = 'content/privacy_policy';
-$route['terms-of-use'] = 'content/terms_of_use';
-
-
-$route['default_controller'] = 'home';
-$route['404_override'] = 'content/error_404';
-$route['translate_uri_dashes'] = FALSE;

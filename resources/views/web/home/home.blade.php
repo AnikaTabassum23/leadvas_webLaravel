@@ -8,7 +8,7 @@
     <meta name="author" content="leadvas">
     <link rel="shortcut icon" href="{!! asset('resource/ico/favicon.png') !!}">
     <meta name="google-site-verification" content="Xu2B86JsxD6JHRl5CzQB_LzSdgi77AnntKxQ4_ghCAc" />
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--Facebook-->
 	<meta property="og:title" content="<?php $title; ?>"/>
 	<meta property="og:type" content="website"/>
@@ -89,8 +89,8 @@
 						<li><a id="GoToContact" href="#contact">Contact</a></li>
 					</ul>
 					<div class="navbar-right">
-						<a href="" class="btn btn-gray">Login</a>
-						<a href="" class="btn btn-primary">Try Demo</a>
+						<a href="login" class="btn btn-gray">Login</a>
+						<a href="demo" class="btn btn-primary">Try Demo</a>
 
 					</div>	
 				</div><!--/.nav-collapse -->
