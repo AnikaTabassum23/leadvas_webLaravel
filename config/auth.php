@@ -16,7 +16,9 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
+        
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -39,6 +41,10 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+        'second_web' => [
+            'driver' => 'session',
+            'provider' => 'second_users',
         ],
         'softAdmin' => [
             'driver' => 'session',
@@ -78,6 +84,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'second_users' => [
+            'driver' => 'eloquent',
+            'model' => App\User::class,
+        ],
         'softAdmins' => [
             'driver' => 'eloquent',
             'model' => App\Admin::class,
@@ -87,9 +97,9 @@ return [
             'model' => App\Model\EnProviderUser_provider::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
+        // 'api' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\User::class,
         // ],
     ],
 

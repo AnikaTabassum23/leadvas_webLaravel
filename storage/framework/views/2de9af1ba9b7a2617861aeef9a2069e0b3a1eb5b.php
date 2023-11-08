@@ -108,6 +108,7 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-md-5 wow fadeInDown" data-wow-delay="0.4s">
 						<div id="set_message"></div>
 						<form id="user_register_form" action="<?php echo e(route('registration.store')); ?>" method="post" class="form-horizontal leadvas-form">
@@ -119,6 +120,20 @@
 								</div>
 								<div class="col-sm-12">
 									<div class="note"> Please fill out all fields.</div>
+								</div>
+								<div class="col-sm-12">
+									<?php if(session('success')): ?>
+										<div class="alert alert-success">
+											<?php echo e(session('success')); ?>
+
+										</div>
+									<?php endif; ?>
+									<?php if(session('error')): ?>
+										<div class="alert alert-danger">
+											<?php echo e(session('error')); ?>
+
+										</div>
+									<?php endif; ?>
 								</div>
 							</div>
 							<div class="form-group">

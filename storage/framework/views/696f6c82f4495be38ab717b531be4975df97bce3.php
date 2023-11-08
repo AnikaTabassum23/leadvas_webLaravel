@@ -6,51 +6,51 @@
 		<meta name="description" content="A powerful, adaptable, affordable products are made for the way your business runs today.">
 		<meta name="keywords" content="CRM,Enterprise,Cloud">
 		<meta name="author" content="leadvas">
-		<link rel="shortcut icon" href="{!! asset('resource/ico/favicon.png') !!}">
+		<link rel="shortcut icon" href="<?php echo asset('resource/ico/favicon.png'); ?>">
 		<meta name="google-site-verification" content="Xu2B86JsxD6JHRl5CzQB_LzSdgi77AnntKxQ4_ghCAc" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!--Facebook-->
 		<meta property="og:title" content="<?php $title; ?>"/>
 		<meta property="og:type" content="website"/>
-		<meta property="og:image" content="{!! asset('resource/img/fb_share.jpg') !!}" />
+		<meta property="og:image" content="<?php echo asset('resource/img/fb_share.jpg'); ?>" />
 
 		<meta property="og:description" content="A powerful, adaptable, affordable products are made for the way your business runs today." />
 		<!--Twitter-->
 		<meta name="twitter:title" content="doc2p">
-		<meta name="twitter:image" content="{!!  asset('resource/img/fb_share.jpg')!!}" />
+		<meta name="twitter:image" content="<?php echo asset('resource/img/fb_share.jpg'); ?>" />
 		<meta name="twitter:description" content="A powerful, adaptable, affordable products are made for the way your business runs today." />
 		<!--Google+-->
 		<meta itemprop="name" content="<?php $title; ?>" />
 		<meta itemprop="description" content="A powerful, adaptable, affordable products are made for the way your business runs today." />
-		<meta itemprop="image" content="{!!asset('resource/img/fb_share.jpg')!!}" />
+		<meta itemprop="image" content="<?php echo asset('resource/img/fb_share.jpg'); ?>" />
 
 		<title><?php $title; ?></title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="{!! asset('resource/css/bootstrap.min.css')!!}" rel="stylesheet">
+		<link href="<?php echo asset('resource/css/bootstrap.min.css'); ?>" rel="stylesheet">
 		<!-- Custom bootstrap styles -->
-		<link href="{!! asset('resource/css/overwrite.css')!!}" rel="stylesheet">
+		<link href="<?php echo asset('resource/css/overwrite.css'); ?>" rel="stylesheet">
 		<!-- Font -->
-		<link href="{!! asset('resource/fonts/open-sans/stylesheet.css'); ?>" rel="stylesheet">
+		<link href="<?php echo asset('resource/fonts/open-sans/stylesheet.css'); ?>" rel="stylesheet">
 		<!-- Font icons -->
-		<link href="{!! asset('resource/css/font-awesome.css')!!}" rel="stylesheet">
-		<link href="{!! asset('resource/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css'); ?>" rel="stylesheet">
+		<link href="{!! asset('resource/css/font-awesome.css'); ?>" rel="stylesheet">
+		<link href="<?php echo asset('resource/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css'); ?>" rel="stylesheet">
 		<link href="{!! asset('resource/fonts/pe-icon-7-stroke/css/helper.css'); ?>" rel="stylesheet">
 		<!-- Animate css -->
-		<link href="{!! asset('resource/css/animate.css')!!}" rel="stylesheet">	
+		<link href="{!! asset('resource/css/animate.css'); ?>" rel="stylesheet">	
 		<!-- flexslider -->	
-		<link href="{!! asset('resource/css/flexslider.css')!!}" rel="stylesheet">
+		<link href="<?php echo asset('resource/css/flexslider.css'); ?>" rel="stylesheet">
 		<!-- Owl carousel -->
-		<link href="{!! asset('resource/css/owl.carousel.css')!!}" rel="stylesheet">
-		<link href="{!! asset('resource/css/owl.theme.css')!!}" rel="stylesheet">
-		<link href="{!! asset('resource/css/owl.transitions.css')!!}" rel="stylesheet">
+		<link href="<?php echo asset('resource/css/owl.carousel.css'); ?>" rel="stylesheet">
+		<link href="<?php echo asset('resource/css/owl.theme.css'); ?>" rel="stylesheet">
+		<link href="<?php echo asset('resource/css/owl.transitions.css'); ?>" rel="stylesheet">
 		<!-- Custom styles for this template -->
-		<link href="{!! asset('resource/css/style.css')!!}" rel="stylesheet">
+		<link href="<?php echo asset('resource/css/style.css'); ?>" rel="stylesheet">
 		<!-- Theme skin -->
-		<link href="{!! asset('resource/skins/default.css')!!}" rel="stylesheet" />
+		<link href="<?php echo asset('resource/skins/default.css'); ?>" rel="stylesheet" />
 		<!-- Slider -->
-		<link href="{!! asset('resource/css/slider.css')!!}" rel="stylesheet" />
-		<link href="{!! asset('resource/css/custom.css')!!}" rel="stylesheet" />
+		<link href="<?php echo asset('resource/css/slider.css'); ?>" rel="stylesheet" />
+		<link href="<?php echo asset('resource/css/custom.css'); ?>" rel="stylesheet" />
 		<style>
 			.pricing-head {
 				text-align: center;
@@ -73,7 +73,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php  ?>"><img src="{!! asset('resource/img/leadvas.png')!!}" alt="" /></a>
+						<a class="navbar-brand" href="<?php  ?>"><img src="<?php echo asset('resource/img/leadvas.png'); ?>" alt="" /></a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav">
@@ -85,8 +85,12 @@
 							<li><a id="GoToContact" href="#contact">Contact</a></li>
 						</ul>
 						<div class="navbar-right">
+							<?php if(Auth::guard('web')->check()): ?>
 							<a href="login" class="btn btn-gray">Login</a>
 							<a href="demo" class="btn btn-primary">Try Demo</a>
+							<?php else: ?>
+							<a href="#" class="btn btn-gray">Dashboard</a>
+							<?php endif; ?>
 
 						</div>	
 					</div><!--/.nav-collapse -->
@@ -106,12 +110,14 @@
 						</div>
 						<div class="device_img">
 							<div  align="center">
-								<a href="#"><img alt="" style="width:70%;" src="{!! asset('resource/img/device.png')!!}"></a>
+								<a href="#"><img alt="" style="width:70%;" src="<?php echo asset('resource/img/device.png'); ?>"></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-5 wow fadeInDown" data-wow-delay="0.4s">
-						<form id="user_login_form" action="{!! asset('user/login')!!}" method="post" class="form-horizontal leadvas-form" data-toggle="validator">
+						<form id="user_login_form" action="<?php echo e(route('loginAction')); ?>" method="post" class="form-horizontal leadvas-form" data-toggle="validator">
+							<?php echo csrf_field(); ?>
+
 							<div class="form-group">
 								<div class="col-sm-12">
 									<div class="title"> Login to Leadvas</div>
@@ -147,7 +153,7 @@
 									<button type="submit" class="btn btn-default btn-block">Login</button>
 								</div>
 								<div class="col-lg-8 col-md-8 col-sm-8">
-									<a href="{!! asset('forgot-pass')!!}"> Forgot your password?</a>
+									<a href="<?php echo asset('forgot-pass'); ?>"> Forgot your password?</a>
 								</div>
 							</div>
 						</form>
@@ -171,9 +177,9 @@
 			</div>	
 		</footer>
 	</body>
-  	<script src="{!! asset('resource/js/jquery.js')!!}"></script>
-	<script src="{!! asset('resource/js/bootstrap.min.js')!!}"></script>
-    <script src="{!! asset('resource/js/jquery-easing-1.3.js')!!}"></script>
+  	<script src="<?php echo asset('resource/js/jquery.js'); ?>"></script>
+	<script src="<?php echo asset('resource/js/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo asset('resource/js/jquery-easing-1.3.js'); ?>"></script>
 	<script type="text/javascript">
 		document.getElementById("loading").className = "loading-visible";
 		var hideDiv = function(){document.getElementById("loading").className = "loading-invisible";};
@@ -181,33 +187,33 @@
 		var newLoad = oldLoad ? function(){hideDiv.call(this);oldLoad.call(this);} : hideDiv;
 		window.onload = newLoad;
 	</script>
-	<script src="{!! asset('resource/js/navigation/waypoints.min.js')!!}"></script>
-	<script src="{!! asset('resource/js/navigation/jquery.smooth-scroll.js')!!}"></script>		
-	<script src="{!! asset('resource/js/navigation/navbar.js')!!}"></script>	
+	<script src="<?php echo asset('resource/js/navigation/waypoints.min.js'); ?>"></script>
+	<script src="<?php echo asset('resource/js/navigation/jquery.smooth-scroll.js'); ?>"></script>		
+	<script src="<?php echo asset('resource/js/navigation/navbar.js'); ?>"></script>	
 	<!-- Wow -->
-	<script src="{!! asset('resource/js/wow/wow.min.js')!!}"></script>
-	<script src="{!! asset('resource/js/wow/setting.js')!!}"></script>
+	<script src="<?php echo asset('resource/js/wow/wow.min.js'); ?>"></script>
+	<script src="<?php echo asset('resource/js/wow/setting.js'); ?>"></script>
 	<!-- flexslider -->
-	<script src="{!! asset('resource/js/flexslider/jquery.flexslider.js')!!}"></script>
-	<script src="{!! asset('resource/js/flexslider/setting.js')!!}"></script>
+	<script src="<?php echo asset('resource/js/flexslider/jquery.flexslider.js'); ?>"></script>
+	<script src="<?php echo asset('resource/js/flexslider/setting.js'); ?>"></script>
 	<!-- counters -->
-	<script src="{!! asset('resource/js/counters/jquery.appear.js')!!}"></script>
-	<script src="{!! asset('resource/js/counters/stellar.js')!!}"></script>
-	<script src="{!! asset('resource/js/counters/setting.js')!!}"></script>
+	<script src="<?php echo asset('resource/js/counters/jquery.appear.js'); ?>"></script>
+	<script src="<?php echo asset('resource/js/counters/stellar.js'); ?>"></script>
+	<script src="<?php echo asset('resource/js/counters/setting.js'); ?>"></script>
 	<!-- Owl carousel -->
-	<script src="{!! asset('resource/js/owlcarousel/owl.carousel.js')!!}"></script>
-    <script src="{!! asset('resource/js/owlcarousel/setting.js')!!}"></script>
+	<script src="<?php echo asset('resource/js/owlcarousel/owl.carousel.js'); ?>"></script>
+    <script src="<?php echo asset('resource/js/owlcarousel/setting.js'); ?>"></script>
 	<!-- Totop -->
-	<script src="{!! asset('resource/js/totop/jquery.ui.totop.js')!!}"></script>	
-	<script src="{!! asset('resource/js/totop/setting.js')!!}"></script>
+	<script src="<?php echo asset('resource/js/totop/jquery.ui.totop.js'); ?>"></script>	
+	<script src="<?php echo asset('resource/js/totop/setting.js'); ?>"></script>
 	<!-- Slider Range -->
-	<script src="{!! asset('resource/js/bootstrap-slider.js')!!}"></script>
+	<script src="<?php echo asset('resource/js/bootstrap-slider.js'); ?>"></script>
 	<!-- Contact validation -->
-	<script src="{!! asset('resource/js/validation.js')!!}"></script>
+	<script src="<?php echo asset('resource/js/validation.js'); ?>"></script>
 	<!-- Customn javascript -->
-	<script src="{!!  asset('adapter/javascript')!!}"></script>
-	<script src="{!! asset('resource/js/custom.js')!!}"></script>
-	<script src="{!! asset('resource/js/custom_index.js')!!}"></script>
+	<script src="<?php echo asset('adapter/javascript'); ?>"></script>
+	<script src="<?php echo asset('resource/js/custom.js'); ?>"></script>
+	<script src="<?php echo asset('resource/js/custom_index.js'); ?>"></script>
 	
 	<script type="text/javascript">
 		var section = "<?php  $section; ?>";
@@ -218,4 +224,4 @@
 		ga('create', 'UA-88811873-1', 'auto');
 		ga('send', 'pageview');
 	</script>
-</html>
+</html><?php /**PATH E:\laragon\www\LeadVasWeb\resources\views/web/home/login.blade.php ENDPATH**/ ?>

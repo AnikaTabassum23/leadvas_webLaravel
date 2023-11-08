@@ -23,23 +23,127 @@ class MasterController extends Controller {
 
     public function getLogin()
     {
-        return view('provider.login');
+        // return view('provider.login');
     }
-    public function postLogin(Request $request)
-    {
-        $data = array(
-            'email' => $request->input('email'),
-            'password' => $request->input('password'),
-            'email_verified' => 1,
-            'status'   => 'Active',
-            'valid'    => 1
-        );
-        if (Auth::guard('provider')->attempt($data)) {
-            return redirect()->route('provider.apps');
-        } else {
-            return redirect()->route('provider.login')->with('error', 'Email or password is not correct.');
-        }
-    }
+    // public function loginAction(Request $request)
+    // {
+    //     $inviter_id = $request->input('inviter');
+    //     $email = $request->input('email');
+    //     $loginFromClassroom = (!empty($request->loginFromClassroom))? $request->loginFromClassroom:"";
+    //     $loginFromMocktest = (!empty($request->loginFromMocktest))? $request->loginFromMocktest:"";
+    //     $remember_me = $request->input('remember_me');
+    //     $remember_me = ($remember_me==1)?true:false;
+    //     $data = array(
+    //         'email'             => $request->input('email'),
+    //         'password'          => $request->input('password'),
+    //         'email_verified'    => 1,
+    //         'status'            => 'Active',
+    //         'valid'             => 1
+    //     );
+
+    //     if (Auth::guard('corporate')->attempt($data, $remember_me)) {
+    //         if(!empty($inviter_id)) {
+    //             if ($loginFromClassroom!="") {
+    //                 $userId = Auth::guard('corporate')->user()->id;
+    //                 EnClassRoomInviters_corporate::where('valid', 1)->find($inviter_id)->update([
+    //                     "user_id"           => $userId,
+    //                     "joining_status"    => 1
+    //                 ]);
+    //                 //INVITER TYPE CHECK
+    //                 $invite_user_type = EnClassRoomInviters_corporate::where('valid', 1)->where('user_id', $userId)->find($inviter_id)->invite_user_type;
+    //                 if ($invite_user_type==2) { //TYPE=2 MEANS TEACHER
+    //                     //TEACHER CHECK
+    //                     $is_teacher = EnUsers_trainee::where('valid', 1)->find($userId)->is_teacher;
+    //                     if ($is_teacher==0) {
+    //                         EnUsers_trainee::where('valid', 1)->find($userId)->update([
+    //                             "is_teacher" => 1
+    //                         ]);
+
+    //                         EnTeacherInfo::create([
+    //                             "user_id"            => $userId
+    //                         ]);
+    //                     }
+    //                     //END TEACHER CHECK
+    //                 }
+    //                 //END INVITER TYPE CHECK
+                    
+    //                 return redirect()->route('web.classRoom');
+    //             } else if($loginFromMocktest!=""){
+    //                 $userId = Auth::guard('corporate')->user()->id;
+    //                 EnClassroomMocktestInviters_corporate::where('valid', 1)->find($inviter_id)->update([
+    //                     "user_id"           => $userId,
+    //                     "joining_status"    => 1
+    //                 ]);
+                    
+    //                 $check = EnMocktestEnroll::valid()->where('trainee_id',$userId)->where('exam_invite_id',$inviter_id)->count();
+
+    //                 if($check > 0)
+    //                 {
+    //                     $data['title'] = 'Error';
+    //                     $data['message'] = 'You are already enrolled !!';
+    //                 }
+    //                 else
+    //                 {
+    //                     $input_data = [
+    //                         "corporate_id"               => $request->corporate_id,
+    //                         "exam_invite_id"             => $inviter_id,
+    //                         "trainee_id"                 => $userId,
+    //                         "course_id"                  => $request->course_id,
+    //                         "exam_limit"                 => $request->exam_limit,
+    //                         "expire_day"                 => $request->expire_day,
+    //                         "exam_type"                  => $request->exam_type,
+    //                         "course_status"              => 0,
+    //                         "assign_exam_id"             => $request->assign_exam_id,
+    //                     ];
+
+    //                     if($request->exam_type == 1)
+    //                     {
+    //                         $input_data['exam_effective_start_date'] = $request->exam_effective_start_date;
+    //                         $input_data['exam_effective_end_date'] = $request->exam_effective_end_date;
+    //                     }
+                        
+    //                     EnMocktestEnroll::create($input_data);
+    //                 }
+    //                 //END INVITER TYPE CHECK
+    //                 return redirect()->route('web.mockTest');
+    //             } else {
+    //                 return redirect()->route('web.myCourses', ['courseInviterId'=>$inviter_id]);
+    //             }
+    //         } else {
+    //             if ($loginFromClassroom!="") {
+    //                 return redirect()->intended(route('web.classRoom'));
+    //             } else if($loginFromMocktest!=""){
+    //                 return redirect()->intended(route('web.mockTest'));
+    //             }else {
+
+    //                 $credentials = array(
+    //                     'email' => $request->input('email'),
+    //                     'password' => $request->input('password')
+    //                 );
+
+    //                 if ($token = Auth::attempt($credentials)) {
+    //                     $user = Auth::guard('corporate')->user();
+    //                     $token = JWTAuth::fromUser($user);
+    //                     // $this->respondWithToken($token);
+    //                 }else{
+    //                     return redirect()->route('web.traineeEmailVerification', [$request->user_token])->with('errorMsg', 'Unauthorized Authentication, please try again');
+    //                 }
+
+    //                 session()->put('reference_token', $token);
+    //                 if(session()->get('reference')){
+    //                     session()->forget('reference');
+    //                     return redirect(Helper::referenceDomain().'/forum-community?token='.$token);
+    //                 }
+                    
+    //                 return redirect()->intended(route('web.home')); 
+    //             }
+    //         }
+    //     } else {
+    //         return redirect()->route('web.login')
+    //         ->with('inviter', $inviter_id)
+    //         ->with('errorMsg', 'Email or Password is wrong');
+    //     }
+    // }
     public function logout()
     {
         Auth::guard('provider')->logout();

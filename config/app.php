@@ -139,6 +139,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -230,6 +231,8 @@ return [
         'Helper' => App\libraries\Helper::class,
         'Carbon' => 'Carbon\Carbon',
         'Image'     => Intervention\Image\Facades\Image::class,
+        'JWTAuth'   => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTAuthFactory'   => Tymon\JWTAuth\Facades\JWTAuthFactory::class,
 
     ],
 

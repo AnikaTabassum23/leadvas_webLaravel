@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'softAdminAccess' => \App\Http\Middleware\SoftAdminAccess::class,
         'providerAuth' => \App\Http\Middleware\ProviderAuth::class,
         'providerUserAccess' => \App\Http\Middleware\ProviderUserAccess::class,
+        'userAutoLogin' => \App\Http\Middleware\userAutoLogin::class,
     ];
 }

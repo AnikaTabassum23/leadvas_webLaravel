@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +22,9 @@ Route::get('/config-clear', function () {
     Artisan::call('view:clear');
     return '<h1>Configurations cleared</h1>';
 });
-
+Route::middleware('auth:api')->get('api/userAuthCheck', function (Request $request) {
+    return $request->user();
+});
 Auth::routes();
 Route::get('javascript', array('as'=>'setUrl', 'uses'=>'AdapterController@javascript'));
 //File Upload //
@@ -31,10 +34,13 @@ Route::post('customFileUnlink', array('as' => 'custom.fileUnlink', 'uses' => 'Fi
 Route::get('multipleFileUnlink', array('as' => 'custom.multipleFileUnlink', 'uses' => 'FileUploadController@multipleFileUnlink'));
 // Front end //
 Route::group(['namespace' => 'web'], function (){
+    //leadvas
     Route::get('demo', array('as' => 'demo', 'uses' => 'HomeController@demo'));
-    Route::get('login', array('as' => 'login', 'uses' => 'HomeController@login'));
-    
-
+	// Route::group(['middleware' => 'userAutoLogin'], function () {
+        Route::get('login', array('as' => 'login', 'uses' => 'HomeController@getLogin'));
+	    Route::post('loginAction', array('as'=>'loginAction', 'uses'=>'HomeController@loginAction'));
+    // });
+    //old
     Route::get('memberAdd', array('access' => ['resource|leads.create'], 'uses' => 'LeadController@add'));
     Route::post('memberAdd', array('access' => ['resource|leads.create'], 'uses' => 'LeadController@storeAdd'));
 
@@ -60,4 +66,8 @@ Route::group(['namespace' => 'web'], function (){
     ## Create registration
     Route::get('/registration/create', 'RegistrationController@create')->name('registration.create');
     Route::post('/registration/store', 'RegistrationController@store')->name('registration.store');
+    // EMAIL VERIFICATION
+Route::get('accountVerification/{user_token}', array('as'=>'accountVerification','uses'=>'AccountVerifyController@accountVerification'));
+Route::post('accountVerificationAction', array('as'=>'accountVerificationAction','uses'=>'AccountVerifyController@accountVerificationAction'));
 
+Route::get('jwtTokenToUserInfo', array('as'=>'jwtTokenToUserInfo','uses'=>'JwtTokenInfoController@jwtTokenToUserInfo'));

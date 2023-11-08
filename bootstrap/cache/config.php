@@ -14,33 +14,34 @@
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
-      0 => 'Illuminate\\Auth\\AuthServiceProvider',
-      1 => 'Illuminate\\Broadcasting\\BroadcastServiceProvider',
-      2 => 'Illuminate\\Bus\\BusServiceProvider',
-      3 => 'Illuminate\\Cache\\CacheServiceProvider',
-      4 => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
-      5 => 'Illuminate\\Cookie\\CookieServiceProvider',
-      6 => 'Illuminate\\Database\\DatabaseServiceProvider',
-      7 => 'Illuminate\\Encryption\\EncryptionServiceProvider',
-      8 => 'Illuminate\\Filesystem\\FilesystemServiceProvider',
-      9 => 'Illuminate\\Foundation\\Providers\\FoundationServiceProvider',
-      10 => 'Illuminate\\Hashing\\HashServiceProvider',
-      11 => 'Illuminate\\Mail\\MailServiceProvider',
-      12 => 'Illuminate\\Notifications\\NotificationServiceProvider',
-      13 => 'Illuminate\\Pagination\\PaginationServiceProvider',
-      14 => 'Illuminate\\Pipeline\\PipelineServiceProvider',
-      15 => 'Illuminate\\Queue\\QueueServiceProvider',
-      16 => 'Illuminate\\Redis\\RedisServiceProvider',
-      17 => 'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider',
-      18 => 'Illuminate\\Session\\SessionServiceProvider',
-      19 => 'Illuminate\\Translation\\TranslationServiceProvider',
-      20 => 'Illuminate\\Validation\\ValidationServiceProvider',
-      21 => 'Illuminate\\View\\ViewServiceProvider',
-      22 => 'Intervention\\Image\\ImageServiceProvider',
-      23 => 'App\\Providers\\AppServiceProvider',
-      24 => 'App\\Providers\\AuthServiceProvider',
-      25 => 'App\\Providers\\EventServiceProvider',
-      26 => 'App\\Providers\\RouteServiceProvider',
+      0 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
+      1 => 'Illuminate\\Auth\\AuthServiceProvider',
+      2 => 'Illuminate\\Broadcasting\\BroadcastServiceProvider',
+      3 => 'Illuminate\\Bus\\BusServiceProvider',
+      4 => 'Illuminate\\Cache\\CacheServiceProvider',
+      5 => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+      6 => 'Illuminate\\Cookie\\CookieServiceProvider',
+      7 => 'Illuminate\\Database\\DatabaseServiceProvider',
+      8 => 'Illuminate\\Encryption\\EncryptionServiceProvider',
+      9 => 'Illuminate\\Filesystem\\FilesystemServiceProvider',
+      10 => 'Illuminate\\Foundation\\Providers\\FoundationServiceProvider',
+      11 => 'Illuminate\\Hashing\\HashServiceProvider',
+      12 => 'Illuminate\\Mail\\MailServiceProvider',
+      13 => 'Illuminate\\Notifications\\NotificationServiceProvider',
+      14 => 'Illuminate\\Pagination\\PaginationServiceProvider',
+      15 => 'Illuminate\\Pipeline\\PipelineServiceProvider',
+      16 => 'Illuminate\\Queue\\QueueServiceProvider',
+      17 => 'Illuminate\\Redis\\RedisServiceProvider',
+      18 => 'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider',
+      19 => 'Illuminate\\Session\\SessionServiceProvider',
+      20 => 'Illuminate\\Translation\\TranslationServiceProvider',
+      21 => 'Illuminate\\Validation\\ValidationServiceProvider',
+      22 => 'Illuminate\\View\\ViewServiceProvider',
+      23 => 'Intervention\\Image\\ImageServiceProvider',
+      24 => 'App\\Providers\\AppServiceProvider',
+      25 => 'App\\Providers\\AuthServiceProvider',
+      26 => 'App\\Providers\\EventServiceProvider',
+      27 => 'App\\Providers\\RouteServiceProvider',
     ),
     'aliases' => 
     array (
@@ -83,6 +84,8 @@
       'Helper' => 'App\\libraries\\Helper',
       'Carbon' => 'Carbon\\Carbon',
       'Image' => 'Intervention\\Image\\Facades\\Image',
+      'JWTAuth' => 'Tymon\\JWTAuth\\Facades\\JWTAuth',
+      'JWTAuthFactory' => 'Tymon\\JWTAuth\\Facades\\JWTAuthFactory',
     ),
   ),
   'auth' => 
@@ -98,6 +101,11 @@
       array (
         'driver' => 'session',
         'provider' => 'users',
+      ),
+      'second_web' => 
+      array (
+        'driver' => 'session',
+        'provider' => 'second_users',
       ),
       'softAdmin' => 
       array (
@@ -119,6 +127,11 @@
     'providers' => 
     array (
       'users' => 
+      array (
+        'driver' => 'eloquent',
+        'model' => 'App\\User',
+      ),
+      'second_users' => 
       array (
         'driver' => 'eloquent',
         'model' => 'App\\User',
@@ -316,6 +329,26 @@
         array (
         ),
       ),
+      'mysql2' => 
+      array (
+        'driver' => 'mysql',
+        'url' => NULL,
+        'host' => '127.0.0.1',
+        'port' => '3306',
+        'database' => 'demo_leadvas',
+        'username' => 'root',
+        'password' => '',
+        'unix_socket' => '',
+        'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+        'prefix_indexes' => true,
+        'strict' => false,
+        'engine' => NULL,
+        'options' => 
+        array (
+        ),
+      ),
       'pgsql' => 
       array (
         'driver' => 'pgsql',
@@ -420,6 +453,42 @@
       'time' => 2,
     ),
   ),
+  'jwt' => 
+  array (
+    'secret' => 'e8TELELYSCbLkdCNwpDAn0UX4PoAKDHPKEk77IPJzyuyH4pievP8MMvBpXQpqhlX',
+    'keys' => 
+    array (
+      'public' => NULL,
+      'private' => NULL,
+      'passphrase' => NULL,
+    ),
+    'ttl' => 60,
+    'refresh_ttl' => 20160,
+    'algo' => 'HS256',
+    'required_claims' => 
+    array (
+      0 => 'iss',
+      1 => 'iat',
+      2 => 'exp',
+      3 => 'nbf',
+      4 => 'sub',
+      5 => 'jti',
+    ),
+    'persistent_claims' => 
+    array (
+    ),
+    'lock_subject' => true,
+    'leeway' => 0,
+    'blacklist_enabled' => true,
+    'blacklist_grace_period' => 0,
+    'decrypt_cookies' => false,
+    'providers' => 
+    array (
+      'jwt' => 'Tymon\\JWTAuth\\Providers\\JWT\\Lcobucci',
+      'auth' => 'Tymon\\JWTAuth\\Providers\\Auth\\Illuminate',
+      'storage' => 'Tymon\\JWTAuth\\Providers\\Storage\\Illuminate',
+    ),
+  ),
   'logging' => 
   array (
     'default' => 'stack',
@@ -505,11 +574,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.gmail.com',
-        'port' => '465',
+        'host' => 'sandbox.smtp.mailtrap.io',
+        'port' => '2525',
         'encryption' => 'tls',
-        'username' => 'tanvirahmed219921@gmail.com',
-        'password' => 'ntatvoolzicvnvhy',
+        'username' => '0c9bc5403d89b7',
+        'password' => 'f8015bdb14edaa',
         'timeout' => NULL,
       ),
       'ses' => 
@@ -541,7 +610,7 @@
     ),
     'from' => 
     array (
-      'address' => 'tanvirahmed219921@gmail.com',
+      'address' => 'tabassumakhianika123@gmail.com',
       'name' => 'Laravel',
     ),
     'markdown' => 

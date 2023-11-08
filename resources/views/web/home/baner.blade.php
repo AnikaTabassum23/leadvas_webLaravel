@@ -108,6 +108,7 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="col-md-5 wow fadeInDown" data-wow-delay="0.4s">
 						<div id="set_message"></div>
 						<form id="user_register_form" action="{{ route('registration.store') }}" method="post" class="form-horizontal leadvas-form">
@@ -118,6 +119,18 @@
 								</div>
 								<div class="col-sm-12">
 									<div class="note"> Please fill out all fields.</div>
+								</div>
+								<div class="col-sm-12">
+									@if(session('success'))
+										<div class="alert alert-success">
+											{{ session('success') }}
+										</div>
+									@endif
+									@if(session('error'))
+										<div class="alert alert-danger">
+											{{ session('error') }}
+										</div>
+									@endif
 								</div>
 							</div>
 							<div class="form-group">

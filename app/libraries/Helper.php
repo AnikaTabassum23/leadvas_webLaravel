@@ -152,7 +152,9 @@ class Helper {
         Config::set('mail', $config);
         return $config;
     }
-
+    public static function mainDomain(){
+        return 'http://localhost/Leadvas/';
+    }
 
     public static function providerUserAccess($route, $module='', $isResource=1) {
         $user_id = Auth::guard('provider')->user()->id;
